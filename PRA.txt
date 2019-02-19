@@ -1,0 +1,13 @@
+General organize performances
+General train captains
+General play instruments
+General represent team
+Captain organize performances
+Captain train seniors
+Captain play drum
+Captain perform routine
+Senior perform routine
+Senior play cymbals
+Senior train recruits
+Recruit perform routine
+Recruit play gong
