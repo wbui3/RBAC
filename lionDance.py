@@ -36,3 +36,30 @@ with open ("PRA.txt") as pfile:
 #print (Captain)
 #print (Senior)
 #print (Recruit)
+
+# Displaying the login prompt
+userID = ""
+while (userID != "logout"):
+    userID = input("Enter User ID: ")
+    if userID == "logout":
+        break
+
+    # search userRoleAssign for userID
+    tracker = 0
+    for key in userRoleAssign.keys():
+        tracker += 1
+        if key == userID:
+            currName = key
+            currRole = userRoleAssign[key]           # based on what this is, we either search the General, Captain, Senior, or Recruit dictionaries 
+            currCMD = ""
+            while (currCMD != "nocmd"):
+                print ("\nYou are logged in as: " + currName)
+                print ("You are a: " + currRole)
+                currAction, currObj = input ("cmd: ").split()       # Assuming the user enters only 2 words, spltis user input to currAction and currObj 
+                if currCMD == "nocmd":
+                    break
+
+        if tracker == len(userRoleAssign):
+            print ("\nERROR: User " + userID + " is not in the database")
+
+print ("\nYou have exited the program...")
